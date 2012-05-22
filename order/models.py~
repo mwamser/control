@@ -1,0 +1,20 @@
+from django.db import models
+from product import *
+
+IOF = 1.07
+
+class Order(models.Model):
+  product = product.Product()
+  quantity = models.Integer(max_digits=50)
+  unit_price = models.DecimalField(max_digits=10, decimal_places=3)
+  sub_total = models.DecimalField(max_digits=10, decimal_places=3)
+  item_total = models.DecimalField(max_digits=10, decimal_places=3)
+  order_status = models.CheckField()
+  
+  seller = models.CharField(max_length=50)
+  
+  def item_total(sub_total):
+    item_total = (sub_total * IOF)
+    
+  def unit_price(item_total, qty):
+    unit_price = item_total / qty
