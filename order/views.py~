@@ -7,7 +7,7 @@ from models import Order
 from order.forms import FormOrder
 
 def add_order(request):
-  form = FormOrder(request.POST, request.FILES)
+  form = FormOrder(reques.POST, request.FILES)
   
   if form.is_valid():
     values = form.cleaned_data

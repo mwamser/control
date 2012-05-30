@@ -2,17 +2,17 @@
 
 {% block body %}
 
-<a href="add_product/">Cadastrar novo produto</a>
+<a href="add_client/">Cadastrar novo cliente</a>
 
 <ul>
 {% for item_c in list_itens %}
   <li>
     <a href="/item_c/{{ item_c.id}}">
-      {{ item_c.name }} {{ item_c.note }}
+      {{ item_c.name }} {{ item_c.tel }}
     </a>
   </li>
 {% empty %}
   <li>Nenhum produto cadastrado</li>
 {% endfor %}
-</ul>
+
 {% endblock %}
