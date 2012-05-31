@@ -8,7 +8,8 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'control.views.home', name='home'),
     # url(r'^control/', include('control.foo.urls')),
-    #(r'^$', 'product.views.index'),
+    (r'^$', 'views.index'),
+    
     (r'^product/$', 'product.views.products_list'),
     (r'^product/add_product/$', 'product.views.add_product'),
         
@@ -17,7 +18,6 @@ urlpatterns = patterns('',
     
     (r'^order/add_order/$' , 'order.views.add_order'),
 
-    
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

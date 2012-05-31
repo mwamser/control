@@ -4,15 +4,22 @@
 
 <a href="add_client/">Cadastrar novo cliente</a>
 
-<ul>
-{% for item_c in list_itens %}
-  <li>
-    <a href="/item_c/{{ item_c.id}}">
-      {{ item_c.name }} {{ item_c.tel }}
-    </a>
-  </li>
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Telefone</th>
+  </tr>
+  {% for item_c in list_itens %}
+  <tr>
+    <td><a href="/item_c/{{ item_c.id }}">{{ item_c.name }}</a></td>
+    <td>{{ item_c.tel }}</td>
+  </tr>
+</table>
+
 {% empty %}
+
   <li>Nenhum cliente cadastrado</li>
+
 {% endfor %}
 
 {% endblock %}

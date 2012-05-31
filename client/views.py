@@ -15,7 +15,7 @@ def add_client(request):
   
   if form.is_valid():
     values = form.cleaned_data
-    item = Client(name=values['name'], tel=values['tel'])
+    item = Client(name=values['Nome'], tel=values['Telefone'])
     item.save()
       
     return render_to_response("save.html", {})
