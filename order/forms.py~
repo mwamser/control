@@ -2,6 +2,8 @@
 
 from django import forms
 
+from client.models import Client
+
 class FormOrder(forms.Form):
-  
-  
+  quantity = forms.IntegerField()
+  client = forms.ModelChoiceField(queryset=Client.objects.all())

@@ -16,7 +16,8 @@ urlpatterns = patterns('',
     (r'^client/$', 'client.views.list_client'),
     (r'^client/add_client/$', 'client.views.add_client'),
     
-    (r'^order/add_order/$' , 'order.views.add_order'),
+    (r'^order/$' , 'order.views.add_order'),
+    #(r'^order/add_order/$' , 'order.views.add_order'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

@@ -11,19 +11,28 @@
 
 </head>
 
-<body>
+<menu type="toolbar">
   <div>
     <ul>
+      <li><a href="/">Home</a></li>
       <li><a href="product/">Produto</a></li>
-      <li>Cliente</li>
-      <li>Venda</li>
-      <li>Fornecedor</li>
+      <li><a href="client/">Cliente</a></li>
+      <li><a href="order/">Venda</a></li>
     </ul>
   </div>
+</menu>
 
+<body>
+  
   {% block body %}
 
   {% endblock %}
 
 </body>
+
+<footer>
+  <div>
+    <p>Publish by <href="http://www.twitter.com/mwamser" />@mwamser</p>
+  </div>
+</footer>
 </html>
